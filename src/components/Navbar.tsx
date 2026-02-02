@@ -25,70 +25,34 @@ export const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-sm'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-4 lg:px-8">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-sm' : 'bg-transparent'}`}>
+      <div className="container px-4 mx-auto lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="text-xl font-bold text-foreground">
-            {t('hero.name')}
-          </div>
+          <div className="text-xl font-bold text-blue-600 text-foreground">{t('Arfian Nurdavicky')}</div>
 
-          <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
+          <div className="items-center hidden gap-8 md:flex">
+            <button onClick={() => scrollToSection('home')} className="transition-colors text-foreground hover:text-blue-600">
               {t('nav.home')}
             </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
+            <button onClick={() => scrollToSection('about')} className="transition-colors text-foreground hover:text-blue-600">
               {t('nav.about')}
             </button>
-            <button
-              onClick={() => scrollToSection('portfolio')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
+            <button onClick={() => scrollToSection('portfolio')} className="transition-colors text-foreground hover:text-blue-600">
               {t('nav.portfolio')}
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
+            <button onClick={() => scrollToSection('contact')} className="transition-colors text-foreground hover:text-blue-600">
               {t('nav.contact')}
             </button>
           </div>
 
           <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              className="hover:bg-muted"
-            >
-              {theme === 'dark' ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
+            <Button variant="ghost" size="icon" onClick={toggleTheme} className="hover:bg-muted">
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
 
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="hover:bg-muted gap-1"
-            >
-              <Globe className="h-4 w-4" />
-              <span className="text-xs font-medium">
-                {language.toUpperCase()}
-              </span>
+            <Button variant="ghost" size="sm" onClick={toggleLanguage} className="gap-1 hover:bg-muted">
+              <Globe className="w-4 h-4" />
+              <span className="text-xs font-medium">{language.toUpperCase()}</span>
             </Button>
           </div>
         </div>
