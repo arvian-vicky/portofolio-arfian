@@ -11,7 +11,7 @@ const websiteProjects = [
       id: 'Sistem ERP (Enterprise Resource Planning) untuk manajemen klinik di PT Gerin Mitra Husada, Jakarta. Dikembangkan sebagai Fullstack Developer menggunakan Laravel dan Bootstrap 5. Termasuk modul manajemen pasien, jadwal janji temu, inventori, tagihan, dan chat melalui Pusher. Digunakan secara internal oleh staf dan admin klinik.',
       en: 'Comprehensive ERP (Enterprise Resource Planning) system for clinic management at PT Gerin Mitra Husada, Jakarta. Developed as a Fullstack Developer using Laravel and Bootstrap 5. Includes modules for patient management, appointment scheduling, inventory tracking, billing, and chat via Pusher. Used internally by clinic staff and administrators.',
     },
-    image: '',
+    image: '/img/ERP.png',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const websiteProjects = [
       id: 'Frontend untuk EFO — platform organisasi esports. Merancang antarmuka responsif dan interaktif menggunakan Bootstrap dan Laravel untuk manajemen tim serta pelacakan pertandingan secara real-time. Digunakan secara internal oleh admin dan pemain EFO.',
       en: 'Frontend development for EFO – an esports organization platform. Designed a responsive and interactive UI with Bootstrap and Laravel for real-time team management and match tracking. Used internally by EFO’s admin and players.',
     },
-    image: '',
+    image: '/public/img/EFO.png',
   },
 ];
 
