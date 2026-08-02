@@ -11,7 +11,7 @@ const websiteProjects = [
       id: 'Website resmi Mulqi Group - dibangun untuk klien DiGiat sebagai Fullstack Developer. Menggunakan teknologi modern untuk menghadirkan tampilan profesional dan responsif.',
       en: 'Comprehensive ERP (Enterprise Resource Planning) system for clinic management at PT Gerin Mitra Husada, Jakarta. Developed as a Fullstack Developer using Laravel and Bootstrap 5. Includes modules for patient management, appointment scheduling, inventory tracking, billing, and chat via Pusher. Used internally by clinic staff and administrators.',
     },
-    image: '/img/ERP.png',
+    image: '/public/img/mulqii.png',
     url: 'https://mulqigroup.com/',
   },
   {
