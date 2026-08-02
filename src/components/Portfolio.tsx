@@ -6,12 +6,13 @@ import { ExternalLink, Download, Clock } from 'lucide-react';
 const websiteProjects = [
   {
     id: 1,
-    name: 'ERP Dokterhub',
+    name: 'Mulqi Gruop',
     description: {
-      id: 'Sistem ERP (Enterprise Resource Planning) untuk manajemen klinik di PT Gerin Mitra Husada, Jakarta. Dikembangkan sebagai Fullstack Developer menggunakan Laravel dan Bootstrap 5. Termasuk modul manajemen pasien, jadwal janji temu, inventori, tagihan, dan chat melalui Pusher. Digunakan secara internal oleh staf dan admin klinik.',
+      id: 'Website resmi Mulqi Group - dibangun untuk klien DiGiat sebagai Fullstack Developer. Menggunakan teknologi modern untuk menghadirkan tampilan profesional dan responsif.',
       en: 'Comprehensive ERP (Enterprise Resource Planning) system for clinic management at PT Gerin Mitra Husada, Jakarta. Developed as a Fullstack Developer using Laravel and Bootstrap 5. Includes modules for patient management, appointment scheduling, inventory tracking, billing, and chat via Pusher. Used internally by clinic staff and administrators.',
     },
     image: '/img/ERP.png',
+    url: 'https://mulqigroup.com/',
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ const websiteSampleProjects = [
     },
     image: '/img/motoshop.png',
     url: 'https://motoshop-five.vercel.app/',
+    downloadUrl: '#',
   },
   {
     id: 2,
@@ -44,6 +46,7 @@ const websiteSampleProjects = [
     },
     image: '/img/vutsal.png',
     url: 'https://vutsal-store.vercel.app/',
+    downloadUrl: '#',
   },
 ];
 
