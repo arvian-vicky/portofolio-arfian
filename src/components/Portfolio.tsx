@@ -7,7 +7,7 @@ import mulqiImage from '../assets/image/mulqii.png';
 import hemokuImage from '../assets/image/hemoku.jpeg';
 import motoshopImage from '../assets/image/motoshop.png';
 import gunitaImage from '../assets/image/gunita.jpeg';
-import diabeticImage from '../assets/image/m-diabetic.png';
+import diabeticImage from '../assets/image/diabetic.jpeg';
 
 export interface Project {
   id: number;
