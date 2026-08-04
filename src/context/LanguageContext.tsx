@@ -70,6 +70,8 @@ const translations = {
     'portfolio.mobile': 'Mobile App',
     'portfolio.liveDemo': 'Live Demo',
     'portfolio.download': 'Download APK',
+    'portfolio.URL': 'url',
+    'portfolio.downloadUrl': 'downloadUrl',
 
     // Contact
     'contact.title': 'Contact Me',

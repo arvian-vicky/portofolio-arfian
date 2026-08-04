@@ -3,8 +3,11 @@ import { Button } from '../components/ui/button';
 import { useLanguage } from '../context/LanguageContext';
 import { ExternalLink, Download, Clock } from 'lucide-react';
 
-import mulqiImage from '../public/img/mulqii.png';
-import efoImage from '../public/img/EFO.png';
+import mulqiImage from '../assets/image/mulqii.png';
+import efoImage from '../assets/image/EFO.png';
+import hemokuImage from '../assets/image/hemoku.jpeg';
+import motoshopImage from '../assets/image/motoshop.png';
+import vutsalImage from '../assets/image/vutsal.png';
 
 export interface Project {
   id: number;
@@ -49,7 +52,7 @@ const mobileProjects = [
       id: 'Pengembangan backend untuk aplikasi Hemoku bekerja sama dengan Stikes Widya Dharma Husada dan dosen Universitas Pamulang. Fokus saya adalah membangun backend menggunakan Laravel untuk skrining anemia dan manajemen pasien. Segera hadir di Play Store.',
       en: 'Backend development for Hemoku mobile app in collaboration with Stikes Widya Dharma Husada and lecturers from Universitas Pamulang. My role focused on building the backend with Laravel for anemia screening and patient management. Available soon on Play Store.',
     },
-    image: '/img/hemoku.jpeg',
+    image: hemokuImage,
     downloadUrl: 'soon',
   },
   {
@@ -59,7 +62,7 @@ const mobileProjects = [
       id: 'Sistem backend untuk aplikasi M-Diabetic Care bekerja sama dengan Stikes Widya Dharma Husada dan dosen Universitas Pamulang — alat bantu skrining dan manajemen diabetes. Fokus saya adalah membangun backend menggunakan Laravel dengan performa dan keamanan tinggi. Segera hadir di Play Store.',
       en: 'Backend system for M-Diabetic Care mobile app in collaboration with Stikes Widya Dharma Husada and lecturers from Universitas Pamulang — a tool for diabetes screening and management. My role focused on building the backend with Laravel with emphasis on performance and security. Coming soon on Play Store.',
     },
-    image: '/img/diabetic.jpeg',
+    image: motoshopImage,
     downloadUrl: 'soon',
   },
   {
@@ -69,7 +72,7 @@ const mobileProjects = [
       id: 'Aplikasi mobile fullstack untuk manajemen tanaman herbal di Desa Gunaksa, Bali. Dikembangkan bekerja sama dengan mahasiswa dan dosen Universitas Udayana serta pemerintah daerah setempat. Saya membangun backend dengan Go dan berkontribusi sebagian pada tampilan menggunakan Flutter. Fitur mencakup database tanaman, konsultasi, dan e-commerce.',
       en: 'Fullstack mobile app for herbal plant management in Desa Gunaksa, Bali. Developed in collaboration with students and lecturers from Universitas Udayana and local government. I built the backend with Go and contributed partially to the frontend using Flutter. Features include plant database, consultation, and e-commerce.',
     },
-    image: '/img/gunita.jpeg',
+    image: vutsalImage,
     downloadUrl: 'soon',
   },
 ];

@@ -70,7 +70,7 @@ export const About = () => {
             )}
 
             {/* Contact Button */}
-            <a href="/resume/Resume_Arfian Nurdavicky.pdf" download className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold bg-blue-600 rounded-lg hover:bg-primary/90 text-primary-foreground">
+            <a href="/resume/CV_Arfian Nurdavicky.pdf" download className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold bg-blue-600 rounded-lg hover:bg-primary/90 text-primary-foreground">
               <Download className="w-5 h-5" />
               {language === 'id' ? 'Unduh Resume' : 'Download Resume'}
             </a>
