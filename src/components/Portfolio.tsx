@@ -3,6 +3,21 @@ import { Button } from '../components/ui/button';
 import { useLanguage } from '../context/LanguageContext';
 import { ExternalLink, Download, Clock } from 'lucide-react';
 
+import mulqiImage from '../public/img/mulqii.png';
+import efoImage from '../public/img/EFO.png';
+
+export interface Project {
+  id: number;
+  name: string;
+  description: {
+    id: string;
+    en: string;
+  };
+  image: string;
+  url: string;
+  downloadUrl: string;
+}
+
 const websiteProjects = [
   {
     id: 1,
@@ -11,7 +26,7 @@ const websiteProjects = [
       id: 'Website resmi Mulqi Group - dibangun untuk klien DiGiat sebagai Fullstack Developer. Menggunakan teknologi modern untuk menghadirkan tampilan profesional dan responsif.',
       en: 'Comprehensive ERP (Enterprise Resource Planning) system for clinic management at PT Gerin Mitra Husada, Jakarta. Developed as a Fullstack Developer using Laravel and Bootstrap 5. Includes modules for patient management, appointment scheduling, inventory tracking, billing, and chat via Pusher. Used internally by clinic staff and administrators.',
     },
-    image: '/public/img/mulqii.png',
+    image: mulqiImage,
     url: 'https://mulqigroup.com/',
   },
   {
@@ -21,32 +36,8 @@ const websiteProjects = [
       id: 'Frontend untuk EFO — platform organisasi esports. Merancang antarmuka responsif dan interaktif menggunakan Bootstrap dan Laravel untuk manajemen tim serta pelacakan pertandingan secara real-time. Digunakan secara internal oleh admin dan pemain EFO.',
       en: 'Frontend development for EFO – an esports organization platform. Designed a responsive and interactive UI with Bootstrap and Laravel for real-time team management and match tracking. Used internally by EFO’s admin and players.',
     },
-    image: '/public/img/EFO.png',
-  },
-];
-
-const websiteSampleProjects = [
-  {
-    id: 1,
-    name: 'MotoShop Template',
-    description: {
-      id: 'Template e-commerce modern bertema motor dengan desain gelap, dibangun menggunakan React dan Tailwind CSS.',
-      en: 'Template for a modern motorcycle e-commerce website built with React and Tailwind CSS.',
-    },
-    image: '/img/motoshop.png',
-    url: 'https://motoshop-five.vercel.app/',
-    downloadUrl: '#',
-  },
-  {
-    id: 2,
-    name: 'Vutsal Store Template',
-    description: {
-      id: 'Konsep landing page untuk toko perlengkapan olahraga dengan desain hijau yang modern dan bersih.',
-      en: 'Landing page concept for a sports gear store with clean, green modern aesthetics.',
-    },
-    image: '/img/vutsal.png',
-    url: 'https://vutsal-store.vercel.app/',
-    downloadUrl: '#',
+    image: efoImage,
+    url: 'https://efo.id/',
   },
 ];
 
@@ -83,54 +74,26 @@ const mobileProjects = [
   },
 ];
 
-const mobileSampleProjects = [
-  {
-    id: 1,
-    name: 'Sample Todo App',
-    description: {
-      id: 'Aplikasi Todo sederhana berbasis Flutter yang mendemonstrasikan manajemen state dasar.',
-      en: 'A simple Todo mobile app built with Flutter, demonstrating basic state management.',
-    },
-    image: 'https://images.unsplash.com/photo-1590608897129-79da98d159d9?w=400&q=80',
-    downloadUrl: '#',
-  },
-  {
-    id: 2,
-    name: 'Sample E-commerce App',
-    description: {
-      id: 'Starter kit aplikasi belanja mobile dengan integrasi REST API dan Flutter.',
-      en: 'Starter kit for a mobile shopping app built with Flutter and REST API integration.',
-    },
-    image: 'https://images.unsplash.com/photo-1607083206968-13611e3fbb0a?w=400&q=80',
-    downloadUrl: '#',
-  },
-];
-
 export const Portfolio = () => {
   const { t, language } = useLanguage();
-  const [activeTab, setActiveTab] = useState<'website' | 'websiteSample' | 'mobile' | 'mobileSample'>('website');
+  const [activeTab, setActiveTab] = useState<'website' | 'mobile'>('website');
 
-  const tabs = [
+  type TabId = 'website' | 'mobile';
+  const tabs: { id: TabId; label: string }[] = [
     { id: 'website', label: t('portfolio.website') },
-    { id: 'websiteSample', label: language === 'id' ? 'Contoh Website' : 'Sample Website' },
     { id: 'mobile', label: t('portfolio.mobile') },
-    { id: 'mobileSample', label: language === 'id' ? 'Contoh Mobile' : 'Sample Mobile' },
   ];
 
   const getProjects = () => {
     switch (activeTab) {
       case 'website':
         return websiteProjects;
-      case 'websiteSample':
-        return websiteSampleProjects;
       case 'mobile':
         return mobileProjects;
-      case 'mobileSample':
-        return mobileSampleProjects;
     }
   };
 
-  const isWebsiteTab = activeTab === 'website' || activeTab === 'websiteSample';
+  const isWebsiteTab = activeTab === 'website';
 
   return (
     <section id="portfolio" className="px-4 py-20">
@@ -140,7 +103,7 @@ export const Portfolio = () => {
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12 ">
           {tabs.map((tab) => (
-            <Button key={tab.id} variant={activeTab === tab.id ? 'default' : 'outline'} onClick={() => setActiveTab(tab.id as any)} className="px-6 bg-blue-600">
+            <Button key={tab.id} variant={activeTab === tab.id ? 'default' : 'outline'} onClick={() => setActiveTab(tab.id)} className="px-6 bg-blue-600">
               {tab.label}
             </Button>
           ))}
@@ -163,7 +126,7 @@ export const Portfolio = () => {
 
                 {/* Buttons */}
                 <div className="mt-4">
-                  {activeTab === 'websiteSample' && (
+                  {activeTab === 'website' && (
                     <Button variant="outline" className="w-full gap-2 text-blue-600 border-blue-600 hover:bg-primary hover:text-primary-foreground" onClick={() => window.open(project.url, '_blank')}>
                       <ExternalLink className="w-4 h-4" />
                       {t('portfolio.liveDemo')}
@@ -175,19 +138,6 @@ export const Portfolio = () => {
                       <Button variant="outline" disabled className="w-full gap-2 cursor-not-allowed border-muted-foreground text-muted-foreground">
                         <Clock className="w-4 h-4" />
                         {language === 'id' ? 'Segera Hadir di Play Store' : 'Coming Soon on Play Store'}
-                      </Button>
-                    ) : (
-                      <Button variant="outline" className="w-full gap-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open(project.downloadUrl, '_blank')}>
-                        <Download className="w-4 h-4" />
-                        {t('portfolio.download')}
-                      </Button>
-                    ))}
-
-                  {activeTab === 'mobileSample' &&
-                    (project.downloadUrl === '#' ? (
-                      <Button variant="outline" disabled className="w-full gap-2 cursor-not-allowed border-muted-foreground text-muted-foreground">
-                        <Clock className="w-4 h-4" />
-                        {language === 'id' ? 'Segera Hadir' : 'Coming Soon'}
                       </Button>
                     ) : (
                       <Button variant="outline" className="w-full gap-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => window.open(project.downloadUrl, '_blank')}>
