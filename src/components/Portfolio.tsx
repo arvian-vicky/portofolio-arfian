@@ -4,10 +4,10 @@ import { useLanguage } from '../context/LanguageContext';
 import { ExternalLink, Download, Clock } from 'lucide-react';
 
 import mulqiImage from '../assets/image/mulqii.png';
-import efoImage from '../assets/image/EFO.png';
 import hemokuImage from '../assets/image/hemoku.jpeg';
 import motoshopImage from '../assets/image/motoshop.png';
-import vutsalImage from '../assets/image/vutsal.png';
+import gunitaImage from '../assets/image/gunita.jpeg';
+import diabeticImage from '../assets/image/m-diabetic.png';
 
 export interface Project {
   id: number;
@@ -34,13 +34,13 @@ const websiteProjects = [
   },
   {
     id: 2,
-    name: 'Web EFO (Esports Football One)',
+    name: 'Motoshop',
     description: {
-      id: 'Frontend untuk EFO — platform organisasi esports. Merancang antarmuka responsif dan interaktif menggunakan Bootstrap dan Laravel untuk manajemen tim serta pelacakan pertandingan secara real-time. Digunakan secara internal oleh admin dan pemain EFO.',
-      en: 'Frontend development for EFO – an esports organization platform. Designed a responsive and interactive UI with Bootstrap and Laravel for real-time team management and match tracking. Used internally by EFO’s admin and players.',
+      id: 'Frontend untuk MotoShop — platform toko sepeda motor. Merancang antarmuka responsif dan interaktif menggunakan Bootstrap dan Laravel untuk manajemen tim serta pelacakan pertandingan secara real-time. Digunakan secara internal oleh admin dan pemain EFO.',
+      en: 'Frontend development for MotoShop – a motorcycle shop platform. Designed a responsive and interactive UI with Bootstrap and Laravel for real-time inventory management and order tracking. Used internally by MotoShop’s admin and staff.',
     },
-    image: efoImage,
-    url: 'https://efo.id/',
+    image: motoshopImage,
+    url: 'https://motoshop-five.vercel.app/',
   },
 ];
 
@@ -62,7 +62,7 @@ const mobileProjects = [
       id: 'Sistem backend untuk aplikasi M-Diabetic Care bekerja sama dengan Stikes Widya Dharma Husada dan dosen Universitas Pamulang — alat bantu skrining dan manajemen diabetes. Fokus saya adalah membangun backend menggunakan Laravel dengan performa dan keamanan tinggi. Segera hadir di Play Store.',
       en: 'Backend system for M-Diabetic Care mobile app in collaboration with Stikes Widya Dharma Husada and lecturers from Universitas Pamulang — a tool for diabetes screening and management. My role focused on building the backend with Laravel with emphasis on performance and security. Coming soon on Play Store.',
     },
-    image: motoshopImage,
+    image: diabeticImage,
     downloadUrl: 'soon',
   },
   {
@@ -72,7 +72,7 @@ const mobileProjects = [
       id: 'Aplikasi mobile fullstack untuk manajemen tanaman herbal di Desa Gunaksa, Bali. Dikembangkan bekerja sama dengan mahasiswa dan dosen Universitas Udayana serta pemerintah daerah setempat. Saya membangun backend dengan Go dan berkontribusi sebagian pada tampilan menggunakan Flutter. Fitur mencakup database tanaman, konsultasi, dan e-commerce.',
       en: 'Fullstack mobile app for herbal plant management in Desa Gunaksa, Bali. Developed in collaboration with students and lecturers from Universitas Udayana and local government. I built the backend with Go and contributed partially to the frontend using Flutter. Features include plant database, consultation, and e-commerce.',
     },
-    image: vutsalImage,
+    image: gunitaImage,
     downloadUrl: 'soon',
   },
 ];
