@@ -8,6 +8,7 @@ import hemokuImage from '../assets/image/hemoku.jpeg';
 import motoshopImage from '../assets/image/motoshop.png';
 import gunitaImage from '../assets/image/gunita.jpeg';
 import diabeticImage from '../assets/image/diabetic.jpeg';
+import skillIdImage from '../assets/image/skillid.png';
 
 export interface Project {
   id: number;
@@ -36,11 +37,21 @@ const websiteProjects = [
     id: 2,
     name: 'Motoshop',
     description: {
-      id: 'Frontend untuk MotoShop — platform toko sepeda motor. Merancang antarmuka responsif dan interaktif menggunakan Bootstrap dan Laravel untuk manajemen tim serta pelacakan pertandingan secara real-time. Digunakan secara internal oleh admin dan pemain EFO.',
-      en: 'Frontend development for MotoShop – a motorcycle shop platform. Designed a responsive and interactive UI with Bootstrap and Laravel for real-time inventory management and order tracking. Used internally by MotoShop’s admin and staff.',
+      id: 'Frontend untuk MotoShop — platform toko sepeda motor. Merancang antarmuka responsif dan interaktif menggunakan React dan Tailwind CSS untuk manajemen tim serta pelacakan pertandingan secara real-time.',
+      en: 'Frontend development for MotoShop – a motorcycle shop platform. Designed a responsive and interactive UI with React and Tailwind CSS for real-time inventory management and order tracking.',
     },
     image: motoshopImage,
     url: 'https://motoshop-five.vercel.app/',
+  },
+  {
+    id: 3,
+    name: 'Skill Id',
+    description: {
+      id: 'Website resmi Skill Id — dibangun untuk klien DiGiat sebagai Fullstack Developer. Menggunakan teknologi modern untuk menghadirkan tampilan profesional dan responsif.',
+      en: 'Official website for Skill Id – developed for a client as a Fullstack Developer. Utilized modern technologies to create a professional and responsive design.',
+    },
+    image: skillIdImage,
+    url: 'https://skill-id-nine.vercel.app/',
   },
 ];
 
