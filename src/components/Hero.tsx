@@ -3,11 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-const heroImages = [
-  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80',
-  'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&q=80',
-  'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80',
-];
+const heroImages = ['assets/image/coding2.jpg', 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&q=80', 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80'];
 
 export const Hero = () => {
   const { t } = useLanguage();
