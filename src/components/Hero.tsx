@@ -3,7 +3,11 @@ import { useLanguage } from '../context/LanguageContext';
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-const heroImages = ['assets/image/coding2.jpg', 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&q=80', 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80'];
+const heroImages = [
+  'https://unsplash.com/id/foto/layar-komputer-dengan-banyak-kode-di-atasnya-ieic5Tq8YMk',
+  'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&q=80',
+  'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80',
+];
 
 export const Hero = () => {
   const { t } = useLanguage();
