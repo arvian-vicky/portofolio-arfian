@@ -2,12 +2,11 @@ import { Button } from '../components/ui/button';
 import { useLanguage } from '../context/LanguageContext';
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import heroimage1 from '../assets/image/coding1.jpg';
+import heroimage2 from '../assets/image/coding2.jpg';
+import heroimage3 from '../assets/image/coding3.jpg';
 
-const heroImages = [
-  'https://unsplash.com/id/foto/layar-komputer-dengan-banyak-kode-di-atasnya-ieic5Tq8YMk',
-  'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&q=80',
-  'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80',
-];
+const heroImages = [{ image: heroimage1 }, { image: heroimage2 }, { image: heroimage3 }];
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -36,7 +35,7 @@ export const Hero = () => {
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
             style={{
-              backgroundImage: `url(${image})`,
+              backgroundImage: `url(${image.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
