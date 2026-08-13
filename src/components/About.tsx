@@ -1,18 +1,22 @@
 import { useLanguage } from '../context/LanguageContext';
 import { Download, Brain, Users, Lightbulb, Clock, MessageSquare } from 'lucide-react';
-import { SiLaravel, SiReact, SiTailwindcss, SiHtml5, SiCss3, SiJavascript, SiMysql, SiBootstrap, SiGit, SiGo } from 'react-icons/si';
+import { SiLaravel, SiReact, SiTailwindcss, SiHtml5, SiJavascript, SiMysql, SiPostgresql, SiBootstrap, SiGit, SiGo, SiNextdotjs, SiTypescript, SiFlutter, SiDocker } from 'react-icons/si';
 
 const skills = [
-  { icon: SiHtml5, name: 'HTML5' },
-  { icon: SiCss3, name: 'CSS3' },
   { icon: SiJavascript, name: 'JavaScript' },
+  { icon: SiTypescript, name: 'TypeScript' },
+  { icon: SiFlutter, name: 'Flutter' },
   { icon: SiGo, name: 'Go' },
   { icon: SiLaravel, name: 'Laravel' },
   { icon: SiBootstrap, name: 'Bootstrap' },
-  { icon: SiMysql, name: 'SQL / MySQL' },
+  { icon: SiMysql, name: ' MySQL' },
+  { icon: SiPostgresql, name: 'PostgreSQL' },
   { icon: SiReact, name: 'React' },
+  { icon: SiNextdotjs, name: 'Next.js' },
   { icon: SiTailwindcss, name: 'Tailwind CSS' },
+  { icon: SiDocker, name: 'Docker' },
   { icon: SiGit, name: 'Git' },
+  { icon: SiHtml5, name: 'HTML5' },
 ];
 
 const softSkills = [
