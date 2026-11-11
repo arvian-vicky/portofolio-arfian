@@ -1,18 +1,19 @@
 import { useLanguage } from '../context/LanguageContext';
 import { Download, Brain, Users, Lightbulb, Clock, MessageSquare } from 'lucide-react';
-import { SiLaravel, SiReact, SiTailwindcss, SiHtml5, SiJavascript, SiMysql, SiPostgresql, SiBootstrap, SiGit, SiGo, SiNextdotjs, SiTypescript, SiReactivex, SiDocker } from 'react-icons/si';
+import { SiLaravel, SiReact, SiTailwindcss, SiHtml5, SiJavascript, SiMysql, SiPostgresql, SiBootstrap, SiGit, SiGo, SiNextdotjs, SiTypescript, SiReactivex, SiDocker, SiPython } from 'react-icons/si';
 
 const skills = [
   { icon: SiJavascript, name: 'JavaScript' },
   { icon: SiTypescript, name: 'TypeScript' },
+  { icon: SiReact, name: 'React.js' },
+  { icon: SiNextdotjs, name: 'Next.js' },
   { icon: SiReactivex, name: 'React Native' },
   { icon: SiGo, name: 'Go' },
+  { icon: SiPython, name: 'Python' },
   { icon: SiLaravel, name: 'Laravel' },
   { icon: SiBootstrap, name: 'Bootstrap' },
   { icon: SiMysql, name: ' MySQL' },
   { icon: SiPostgresql, name: 'PostgreSQL' },
-  { icon: SiReact, name: 'React.js' },
-  { icon: SiNextdotjs, name: 'Next.js' },
   { icon: SiTailwindcss, name: 'Tailwind CSS' },
   { icon: SiDocker, name: 'Docker' },
   { icon: SiGit, name: 'Git' },
